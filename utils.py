@@ -4,7 +4,26 @@ Utility functions for Uyghur ASR.
 
 import os
 import warnings
+import logging
 import torch
+
+
+def setup_logging(log_level: str = "INFO") -> logging.Logger:
+    """
+    Setup logging configuration.
+    
+    Args:
+        log_level: Logging level (DEBUG, INFO, WARNING, ERROR)
+        
+    Returns:
+        Configured logger instance
+    """
+    logging.basicConfig(
+        level=getattr(logging, log_level.upper()),
+        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+        datefmt="%Y-%m-%d %H:%M:%S"
+    )
+    return logging.getLogger("uyghur_asr")
 
 
 def setup_environment():
