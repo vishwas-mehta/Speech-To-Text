@@ -74,7 +74,10 @@ def main():
     # Print GPU stats
     print_gpu_stats()
     
-    print("Done!")
+    print("=" * 50)
+    print("Training completed successfully!")
+    print(f"Results saved to: {config.output_dir}")
+    print("=" * 50)
 
 
 if __name__ == "__main__":
