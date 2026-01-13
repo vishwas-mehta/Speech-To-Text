@@ -72,13 +72,20 @@ def save_model(model, processor: WhisperProcessor, save_path: Path):
         model: Trained Whisper model
         processor: WhisperProcessor
         save_path: Directory to save model
+        
+    Raises:
+        IOError: If model cannot be saved
     """
-    save_path.mkdir(parents=True, exist_ok=True)
-    
-    model.save_pretrained(save_path)
-    processor.save_pretrained(save_path)
-    
-    print(f"Model saved to: {save_path}")
+    try:
+        save_path.mkdir(parents=True, exist_ok=True)
+        
+        model.save_pretrained(save_path)
+        processor.save_pretrained(save_path)
+        
+        print(f"Model saved to: {save_path}")
+    except Exception as e:
+        print(f"Error saving model: {e}")
+        raise IOError(f"Failed to save model to {save_path}") from e
 
 
 def print_gpu_stats():
