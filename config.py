@@ -2,6 +2,9 @@
 Configuration settings for Uyghur ASR training.
 """
 
+__version__ = "1.0.0"
+__author__ = "Vishwas Mehta"
+
 import os
 from pathlib import Path
 from dataclasses import dataclass
