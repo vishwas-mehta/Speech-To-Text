@@ -32,9 +32,9 @@ This project implements an end-to-end ASR system for transcribing Uyghur speech.
 
 ## Requirements
 
-- Python 3.8+
+- Python
 - CUDA-capable GPU (recommended: 16GB+ VRAM)
-- PyTorch 2.0+
+- PyTorch
 
 ## Installation
 
