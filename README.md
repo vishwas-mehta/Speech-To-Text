@@ -135,7 +135,6 @@ Contributions are welcome! Please follow these steps:
 
 ### Development Guidelines
 
-- Follow PEP 8 style guidelines
 - Add docstrings to all functions
 - Update tests for new features
 
